@@ -58,15 +58,31 @@
               <span class="author-block">
                 <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Yizhi Song</a><sup>1*</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="https://zzutk.github.io/" target="_blank">Zhifei Zhang</a><sup>2</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="https://sites.google.com/site/zhelin625/" target="_blank">Zhe Lin</a><sup>2</sup>,</span>
+                    <span class="author-block">
+                      <a href="https://research.adobe.com/person/scott-cohen/" target="_blank">Scott Cohen</a><sup>2</sup>,</span>
+                      <span class="author-block">
+                        <a href="https://www.brianpricephd.com/" target="_blank">Brian Price</a><sup>2</sup>,</span>
+                        <span class="author-block">
+                          <a href="https://jimmie33.github.io/" target="_blank">Jianming Zhang</a><sup>2</sup>,</span>
+                          <span class="author-block">
+                            <a href="https://sites.google.com/view/sooyekim" target="_blank">Soo Ye Kim</a><sup>2</sup>,</span>
+                            <span class="author-block">
+                              <a href="https://sites.google.com/site/hezhangsprinter/" target="_blank">He Zhang</a><sup>2</sup>,</span>
+                              <span class="author-block">
+                                <a href="https://wxiong.me/" target="_blank">Wei Xiong</a><sup>2</sup>,</span>
+                                <span class="author-block">
+                                  <a href="https://www.cs.purdue.edu/homes/aliaga/" target="_blank">Daniel Aliaga</a><sup>1</sup></span>
+                    </span>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <!-- institution -->
+                    <span class="author-block">Purdue University<sup>1</sup>, Adobe<sup>2</sup><br><p style="color: rgb(238, 165, 177);">In CVPR 2024</p></span>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
                   </div>
 
                   <div class="column has-text-centered">
@@ -78,20 +94,9 @@
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
                         </span>
-                        <span>Paper</span>
+                        <span>Paper (soon!)</span>
                       </a>
                     </span>
-
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
 
                   <!-- Github link -->
                   <span class="link-block">
@@ -100,7 +105,7 @@
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code</span>
+                    <span>Project (TBD)</span>
                   </a>
                 </span>
 
@@ -122,23 +127,22 @@
   </div>
 </section>
 
-
-<!-- Teaser video-->
+<!-- Teaser -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
+      <img id="teaser" width="150%" src="./static/images/teaser.png">
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        <p style="font-family:Times New Roman">
+          <b>
+            Figure 1. Top: Comparison with three prior works, i.e., Paint-by-Example, ObjectStitch, and TF-ICON. Our method IMPRINT outperforms others in terms of identity preservation and color/geometry harmonization. Bottom: Given a coarse mask, IMPRINT can change the pose of the object to follow the shape of the mask.
+          </b></p>
       </h2>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
+<!-- End teaser -->
+
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -148,7 +152,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Generative object compositing emerges as a promising new avenue for compositional image editing. However, the requirement of object identity preservation poses a significant challenge, limiting practical usage of most existing methods. In response, this paper introduces IMPRINT, a novel diffusion-based generative model trained with a two-stage learning framework that decouples learning of identity preservation from that of compositing. The first stage is targeted for context-agnostic, identity-preserving pretraining of the object encoder, enabling the encoder to learn an embedding that is both view-invariant and conducive to enhanced detail preservation. The subsequent stage leverages this representation to learn seamless harmonization of the object composited to the background. In addition, IMPRINT incorporates a shape-guidance mechanism offering user-directed control over the compositing process. Extensive experiments demonstrate that IMPRINT significantly outperforms existing methods and various baselines on identity preservation and composition quality.
           </p>
         </div>
       </div>
@@ -158,6 +162,133 @@
 <!-- End paper abstract -->
 
 
+<!-- Pipeline -->
+<section class="section"   style="background-color:white;">
+
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">The Two-stage Pipeline</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="columns is-centered has-text-centered">
+      <div style="width:90%;">
+
+        <div style="float:left; width:47.1%; border: 0px solid black;">
+          <h2 class="title is-5">Stage 1</h2>
+          <div class="content has-text-justified">
+            Stage of context-agnostic ID-preserving: we design a novel image encoder (with pre-trained DINOv2 as backbone) trained on multi-view object pairs to learn view-invariant ID-preserving representation.                
+          </div>  
+
+          <div class="column is-five-fifths">
+              <div class="columns is-centered">
+                <img id="modulated_training" width="105%" src="./static/images/stage1_pipeline.png">
+              </div>
+          </div>
+        </div>
+
+        <div style=" float:right; width:47.8%; border: 0px solid black;">
+          <h2 class="title is-5">Stage 2</h2>
+          <div class="content has-text-justified">
+            Stage of object compositing: taking the learned image encoder from the first stage and freezing its backbone, the whole model is trained for compositing the object to the masked region (see Fig. 3 for the blending process).               
+          </div>
+
+          <div class="column is-five-fifths">
+              <div class="columns is-centered">
+                <img id="modulated_training" width="97%" src="./static/images/stage2_pipeline.png">
+              </div>
+          </div>
+        </div>
+
+      </div>  
+    </div>
+  
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <h2 class="subtitle has-text-centered">
+          <p style="font-family:Times New Roman">
+            <b>
+              Figure 2. The two-stage training pipeline of the proposed IMPRINT.
+            </b></p>
+        </h2>
+      </div>
+    </div>
+</section>
+<!-- End of pipeline -->
+
+
+<!-- Bg blending -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <h2 class="title is-3"> The Background-blending Process </h2> 
+      </div>
+    </div>
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-six-fifths">       
+            <img id="model" width="100%" src="./static/images/blending.png">
+            <h3 class="subtitle has-text-centered">
+              <p style="font-family:Times New Roman"><b>Figure 3. Illustration of the background-blending process. At each denoising step, the background area of the denoised latent is masked and blended with unmasked area from the clean background (intuitively, the model is only denoising the foreground).</b></p>
+            </h3>   
+
+        </div>
+  </div>
+</section>
+<!-- End of bg blending -->
+
+
+<!-- Shape guidance -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <h2 class="title is-3"> Shape-guided Controllable Compositing </h2> 
+      </div>
+    </div>
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-six-fifths">       
+            <img id="model" width="100%" src="./static/images/mask_ctrl.png">
+            <h3 class="subtitle has-text-centered">
+              <p style="font-family:Times New Roman">
+                <b>Figure 4. More shape-control results. IMPRINT introduces more user control by using a user-provided mask as input. Inspired by SmartBrush, we define four types of mask (including bounding box). In addition to object compositing, our model also performs edits on the input object. Depending on the shape of the coarse mask, IMPRINT can operate different types of editing, including changing the view of an object, and applying non-rigid transformation on the object.
+                </b></p>
+            </h3>   
+
+        </div>
+  </div>
+</section>
+<!-- End of shape guidance -->
+
+
+<!-- Ablation -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <h2 class="title is-3"> The ID-preserving Representation </h2> 
+      </div>
+    </div>
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-six-fifths">       
+            <img id="model" width="100%" src="./static/images/recon.png">
+            <h3 class="subtitle has-text-centered">
+              <p style="font-family:Times New Roman">
+                <b>Figure 5. Top: Results of context-agnostic ID-preserving pretraining (after the first stage); IMPRINT generates view pose changes while memorizing the details of the object. Bottom: Diverse poses of the object after the second stage.
+                </b></p>
+            </h3>   
+
+        </div>
+  </div>
+</section>
+<!-- End of ablation -->
+
+
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
@@ -165,30 +296,30 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/qual1.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Qualitative comparison on the DreamBooth test set. Paint-by-Example and ObjectStitch lose most object details and only maintain categorical information. TF-ICON tends to copy the pose of the input subject. The comparison highlights the advantage of IMPRINT in keeping identity and making geometric changes.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/qual2.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          More qualitative comparisons.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/qual3.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-         Third image description.
+          More qualitative comparisons.
        </h2>
      </div>
      <div class="item">
       <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
+      <img src="static/images/qual4.png" alt="MY ALT TEXT"/>
       <h2 class="subtitle has-text-centered">
-        Fourth image description.
+        Additional qualitative comparisons with AnyDoor.
       </h2>
     </div>
   </div>
@@ -198,87 +329,31 @@
 <!-- End image carousel -->
 
 
-
-
 <!-- Youtube video -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+
+      <h2 class="title is-3">Video Presentation (coming soon)</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
           <div class="publication-video">
-            <!-- Youtube embed code here -->
             <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
 
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>Coming soon</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
@@ -292,8 +367,7 @@
 
           <p>
             This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+            </a>
           </p>
 
         </div>
